@@ -13,7 +13,7 @@ namespace Parcours{
         }
     }
     
-    //% bolck="affiche les joueurs en console"
+    //% block="affiche les joueurs en console"
     export function printUser() {
         for (let i = 0; i < idUser.length ; i++) {
             console.log(`${i} [${idUser[i]}]: ${user[i]}`);
