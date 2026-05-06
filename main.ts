@@ -5,11 +5,17 @@ namespace Parcours{
    let userState: number[] = []
    let stateAction: Action[] = []
 
-    //% block="Action à l'étape $pos action $action"
-    export function setAction(pos : number, action : Action){
+    /**
+     * Définit l'action à exécuter pour une étape précise
+     * @param pos l'indice de l'étape
+     * @param action le code à exécuter
+     */
+    //% block="Action à l'étape $pos"
+    //% handlerStatement=1
+    //% draggableParameters="reporter"
+    export function setAction(pos: number, action: (userPos: number, serialNumber: number, message: string) => void) {
         stateAction[pos] = action
     }
-
     radio.onReceivedString(function (receivedString: string) {
         let serial = radio.receivedPacket(RadioPacketProperty.SerialNumber)
         let pos = userId.indexOf(serial )
