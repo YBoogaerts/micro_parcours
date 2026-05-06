@@ -15,11 +15,13 @@ namespace Parcours{
     //% draggableParameters="reporter"
     export function setAction(pos: number, action: (userPos: number, serialNumber: number, message: string) => void) {
         stateAction[pos] = action
+        console.log(action)
     }
     radio.onReceivedString(function (receivedString: string) {
         let serial = radio.receivedPacket(RadioPacketProperty.SerialNumber)
         let pos = userId.indexOf(serial )
         let state = 0;
+        console.log(receivedString)
         if( pos >= 0 ){
             state = userState[pos];
         }
