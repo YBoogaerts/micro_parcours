@@ -18,7 +18,7 @@ namespace Parcours{
     //% block="étape suivante pour $id"
     export function nextState(id: number) {
         let pos = userId.indexOf(id)
-        if (pos < 0) {
+        if (pos >= 0) {
             userState[pos]++
         }
     }
