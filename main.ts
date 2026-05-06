@@ -5,7 +5,7 @@ namespace Parcours{
    let userState: number[] = []
    let stateAction: Action[] = []
 
-    //% block="Action à l'étape $pos"
+    //% block="Action à l'étape $pos action $action"
     export function setAction(pos : number, action : Action){
         stateAction[pos] = action
     }
