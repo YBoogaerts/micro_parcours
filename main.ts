@@ -3,4 +3,8 @@ namespace MonOutil {
     export function direBonjour() {
         basic.showString("Salut !")
     }
+    //% block="dire auRevoir"
+    export function direauRevoir() {
+        basic.showString("By !")
+    }
 }
