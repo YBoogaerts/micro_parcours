@@ -56,6 +56,8 @@ namespace Parcours{
     export function printUser() {
         for (let i = 0; i < userIdList.length ; i++) {
             serial.writeLine(`${i} [${userIdList[i]}]: ${userList[i]} -> étape: ${userStateList[i]}`);
+            // PAUSE CRUCIALE pour le matériel réel
+            basic.pause(20);
         }
     }
     }
