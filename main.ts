@@ -37,13 +37,13 @@ namespace Parcours{
     })
     //% block="inscrire $nom avec le numéro $id"
     export function inscription(nom: string, id: number) {
-        let userId = userIdList.indexOf(id)
-        if (userId < 0) {
+        let userId2 = userIdList.indexOf(id)
+        if (userId2 < 0) {
             userList.push(nom)
             userIdList.push(id)
             userStateList.push(0)
         } else {
-            userList[userId] = nom
+            userList[userId2] = nom
         }
     }
 
@@ -55,7 +55,7 @@ namespace Parcours{
     //% block="affiche les joueurs en console"
     export function printUser() {
         for (let i = 0; i < userIdList.length ; i++) {
-            console.log(`${i} [${userIdList[i]}]: ${userList[i]} -> étape: ${userStateList[i]}`);
+            serial.writeLine(`${i} [${userIdList[i]}]: ${userList[i]} -> étape: ${userStateList[i]}`);
         }
     }
     }
