@@ -57,7 +57,14 @@ namespace Parcours{
         serial.writeLine(`test${userIdList.length}`)
         basic.pause(20)
         for (let i = 0; i < userIdList.length ; i++) {
-            serial.writeLine(`${i} [${userIdList[i]}]: ${userList[i]} -> étape: ${userStateList[i]}`);
+            //serial.writeLine(`${i} [${userIdList[i]}]: ${userList[i]} -> étape: ${userStateList[i]}`);
+            serial.writeNumber(i);
+            serial.writeString(" [");
+            serial.writeNumber(userIdList[i]);
+            serial.writeString("]: ");
+            serial.writeString(userList[i]);
+            serial.writeString(" -> etape: ");
+            serial.writeNumber(userStateList[i]);
             // PAUSE CRUCIALE pour le matériel réel
             basic.pause(20);
         }
