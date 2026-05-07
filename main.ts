@@ -63,8 +63,10 @@ namespace Parcours{
             serial.writeNumber(userIdList[i]);
             serial.writeString("]: ");
             serial.writeString(userList[i]);
+            basic.pause(20);
             serial.writeString(" -> etape: ");
             serial.writeNumber(userStateList[i]);
+            serial.writeLine(",");
             // PAUSE CRUCIALE pour le matériel réel
             basic.pause(20);
         }
