@@ -54,6 +54,8 @@ namespace Parcours{
 
     //% block="affiche les joueurs en console"
     export function printUser() {
+        serial.writeLine("test")
+        basic.pause(20)
         for (let i = 0; i < userIdList.length ; i++) {
             serial.writeLine(`${i} [${userIdList[i]}]: ${userList[i]} -> étape: ${userStateList[i]}`);
             // PAUSE CRUCIALE pour le matériel réel
